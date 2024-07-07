@@ -1,3 +1,4 @@
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -45,16 +46,18 @@ public class TextBoxTests {
         //Проверка введенного
 
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
-        $(".table-responsive").shouldHave(text("Values"));
-        $(".table-responsive").shouldHave(text("Yuliya QAGURU"));
-        $(".table-responsive").shouldHave(text("test@gmail.com"));
-        $(".table-responsive").shouldHave(text("Female"));
-        $(".table-responsive").shouldHave(text("1234567890"));
-        $(".table-responsive").shouldHave(text("15 April,1991"));
-        $(".table-responsive").shouldHave(text("Computer Science"));
-        $(".table-responsive").shouldHave(text("Sports"));
-        $(".table-responsive").shouldHave(text("207.png"));
-        $(".table-responsive").shouldHave(text("Street 1"));
-        $(".table-responsive").shouldHave(text("Rajasthan Jaipur"));
+        $(".table-responsive").shouldHave(
+                Condition.text("Values"),
+                Condition.text("Yuliya QAGURU"),
+                Condition.text("test@gmail.com"),
+                Condition.text("Female"),
+                Condition.text("1234567890"),
+                Condition.text("15 April,1991"),
+                Condition.text("Computer Science"),
+                Condition.text("Sports"),
+                Condition.text("207.png"),
+                Condition.text("Street 1"),
+                Condition.text("Rajasthan Jaipur")
+                );
     }
 }
