@@ -36,16 +36,12 @@ public class TextBoxTests {
 
         $(".subjects-auto-complete__control.css-yk16xz-control").click();
         $("#subjectsInput").setValue("Computer Science").pressEnter();
+        $("#hobbiesWrapper").$(byText("Sports")).click(); //хобби
+        $("#uploadPicture").uploadFromClasspath("207.png"); //загрузка файла
+        $("#currentAddress").setValue("Street 1");
 
-        $("#hobbiesWrapper").setValue("Sports").click(); //хобби
-
-        File testFile = new File("src/test/resources/test.pdf");
-        $("#uploadPicture").uploadFile(testFile);
-
-        $("#uploadPicture").click(); // файл
-        $("#currentAddress").setValue("Some street 1");
-        //$("#state").click();
-       // $("#city").click();
+        $("#state").selectOption("Rajasthan").click();
+        $("#city").selectOption("Jaipur").click();
 
 
 
