@@ -44,7 +44,7 @@ public class TextBoxTests {
         $("#stateCity-wrapper").$(byText("Jaipur")).click();
         $("#submit").click();
 
-
+        //Проверка введенного
 
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
         $(".table-responsive").shouldHave(text("Values"));
